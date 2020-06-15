@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-ths-pattern-locker" version="1.0.0"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>思路手势识别插件</name>
+    <js-module name="ThsPatternLocker" src="www/ThsPatternLocker.js">
+        <clobbers target="cordova.plugins.ThsPatternLocker" />
+    </js-module>
+    <platform name="android">
+       
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="ThsPatternLocker">
+                <param name="android-package" value="cn.com.ths.patternlocker.ThsPatternLocker" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <!--添加使用自定义广播权限-->
+            <uses-permission android:name="cn.com.ths.mybroadcastreceiver.permission" />
+            <!--自定义权限广播-->
+            <permission
+        android:name="cn.com.ths.mybroadcastreceiver.permission"
+        android:protectionLevel="signature" ></permission>
+        </config-file>
+        <source-file src="src/android/ThsPatternLocker.java" target-dir="src/cn/com/ths/patternlocker/ThsPatternLocker" />
+         <source-file src="src/android/MainApplication.java" target-dir="src/cn/com/ths/patternlocker" />
+        <source-file src="src/android/patternlocker.aar" target-dir="libs" />
+        <framework custom="true" src="src/android/thsPatternLocker.gradle" type="gradleReference" />
+    </platform>
+</plugin>

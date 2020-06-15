@@ -1,0 +1,25 @@
+{
+  "name": "cordova-plugin-ths-pattern-locker",
+  "version": "1.0.1",
+  "description": "",
+  "cordova": {
+    "id": "cordova-plugin-ths-pattern-locker",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/THS-FE/cordova-plugin-ths-pattern-locker.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "liuyx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/THS-FE/cordova-plugin-ths-pattern-locker/issues"
+  },
+  "homepage": "https://github.com/THS-FE/cordova-plugin-ths-pattern-locker#readme"
+}
