@@ -1,6 +1,10 @@
 # cordova-plugin-ths-pattern-locker
 手势密码识别cordova 插件
 
+## 支持平台
+
+Android
+
 ## 安装插件
 
 ```
