@@ -56,6 +56,12 @@ public class ThsPatternLocker extends CordovaPlugin {
         } else if (action.equals("veryPwd")) { // 验证手势密码
             context.startActivity(new Intent(context, WholePatternCheckingActivity.class));
             return true;
+        }else if (action.equals("veryPwd")) { // 验证手势密码
+            context.startActivity(new Intent(context, WholePatternCheckingActivity.class));
+            return true;
+        }else if (action.equals("closeActivity")) { // 关闭验证activity
+            WholePatternCheckingActivity.Companion.finishActivity();
+            return true;
         }
         return false;
     }

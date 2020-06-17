@@ -80,6 +80,16 @@ document.addEventListener('thsPatternLocker.onSetPwdReceiver', data => {
 }, false);
 ```
 
+未验证手势密码情况下，主动关闭验证窗口
+
+```java
+cordova.plugins.ThsPatternLocker.closeActivity((success) => {
+      console.log(success);
+    }, (error) => {
+      console.log(error);
+ });
+```
+
 **说明：使用ts 进行开发时，需要在文件上变声明下declare let cordova，不然会报错;**
 
 ```typescript
