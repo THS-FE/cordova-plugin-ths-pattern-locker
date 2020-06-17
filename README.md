@@ -118,3 +118,9 @@ Execution failed for task ':app:mergeDebugResources'.
 ```xml
 <widget id="io.ionic.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
 ```
+### 打包时，出现androidx和android v4包冲突，导致报错
+```
+# 安装以下插件，重新build项目即可。出现这个错误是因为，目前一些新的插件已采用Androidx来统一依赖库，包括本插件
+cordova plugin add cordova-plugin-androidx
+cordova plugin add cordova-plugin-androidx-adapter
+```
